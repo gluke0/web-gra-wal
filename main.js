@@ -11,8 +11,16 @@ document.getElementById('gradient-form').addEventListener('submit', function(eve
     // gradient
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
 
-    gradient.addColorStop(0, color1);
-    gradient.addColorStop(1, color2);
+    switch (direction) {
+        case "top":
+            gradient.addColorStop(0, color1);
+            gradient.addColorStop(1, color2);
+            break;
+        case "bottom":
+            gradient.addColorStop(0, color2);
+            gradient.addColorStop(1, color1);
+            break;
+    }
 
     // style
     ctx.fillStyle = gradient;
@@ -20,3 +28,4 @@ document.getElementById('gradient-form').addEventListener('submit', function(eve
     // fill the canva with the result
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 });
+
