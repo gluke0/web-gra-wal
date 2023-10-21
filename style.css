@@ -4,3 +4,10 @@
     padding: 0;
 }
 
+.all{
+    background-color: rgb(173, 177, 177);
+}
+
+h1{
+    font-style: italic;
+}
