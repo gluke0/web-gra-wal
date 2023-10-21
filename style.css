@@ -11,3 +11,10 @@
 h1{
     font-style: italic;
 }
+
+.colors{
+    border: none;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 2rem;
+}
