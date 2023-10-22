@@ -10,8 +10,13 @@
 }
 
 h1{
-    font-style: italic;
-    font-weight: bolder;
+    padding: 3rem;
+    text-transform: uppercase;
+    font-style: oblique;
+    text-decoration: underline;
+    color: rgb(61, 58, 58)!important;
+    font-size: 3rem!important;
+    font-weight: bolder!important;
 }
 
 .colors{
