@@ -6,10 +6,12 @@
 
 .all{
     background-color: rgb(173, 177, 177);
+    font-weight: bold;
 }
 
 h1{
     font-style: italic;
+    font-weight: bolder;
 }
 
 .colors{
@@ -19,11 +21,24 @@ h1{
     width: 2rem;
 }
 
-.button{
-    padding: 0.6rem;
+label{
+    color: white;
+}
+
+select{
+    padding: 0.4rem 0.6rem;
     border-radius: 0.8rem;
     border: none;
     background-color: gray;
+    font-weight: bold;
+}
+
+.button{
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.8rem;
+    border: none;
+    background-color: gray;
+    font-weight: bold;
 }
 
 .button:hover{
