@@ -40,3 +40,27 @@ helpbox.classList.remove('d-none');
 question.addEventListener('mouseout',()=>{
 helpbox.classList.add('d-none');
 });
+
+// download button
+const download = document.querySelector('#download');
+const canvas = document.querySelector('#wallpaper');
+const submitButton = document.querySelector('#gradient-form input[type="submit"]');
+
+submitButton.addEventListener('click',()=>{
+  download.classList.remove('d-none');
+});
+
+download.addEventListener('click',()=>{
+  const wLink = canvas.toDataURL();
+
+  const link = document.createElement('a');
+  link.href = wLink;
+  link.download = 'wallpaper';
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+});
+

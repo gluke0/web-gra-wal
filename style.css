@@ -46,9 +46,10 @@ select{
     background-color: gray;
     font-weight: bold;
     color: white;
+    margin-right: 0.3rem;
 }
 
-.button:hover{
+.button:hover, #download:hover{
     transform: scale(1.1);
 }
 
@@ -59,12 +60,23 @@ select{
     color: rgb(106, 103, 103);
   }
   
-  #helpbox{
+#helpbox{
     width: 10rem;
     padding: 0.5rem;
     border-radius: 0.8rem;
     background-color: white;
     color: rgb(106, 103, 103);
     font-weight: lighter;
-  }
+}
+
+/* download button */
+#download{
+    color: rgb(106, 103, 103);
+    background-color: white;
+    font-weight: bold;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.8rem;
+    border: none;
+    margin-left: 0.3rem;
+}
   
