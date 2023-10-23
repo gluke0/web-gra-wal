@@ -29,4 +29,14 @@ document.getElementById('gradient-form').addEventListener('submit', function(eve
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 });
 
+// question mark box
+const question = document.getElementById('question');
+const helpbox = document.getElementById('helpbox');
 
+question.addEventListener('mouseover',()=>{
+helpbox.classList.remove('d-none');
+});
+
+question.addEventListener('mouseout',()=>{
+helpbox.classList.add('d-none');
+});

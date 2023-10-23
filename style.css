@@ -36,6 +36,7 @@ select{
     border: none;
     background-color: gray;
     font-weight: bold;
+    color: white;
 }
 
 .button{
@@ -44,6 +45,7 @@ select{
     border: none;
     background-color: gray;
     font-weight: bold;
+    color: white;
 }
 
 .button:hover{
@@ -54,11 +56,12 @@ select{
 .fa-question-circle{
     cursor: pointer;
     margin-left: 0.4rem;
+    color: rgb(106, 103, 103);
   }
   
   #helpbox{
     width: 10rem;
-    padding: 0.4rem;
+    padding: 0.5rem;
     border-radius: 0.8rem;
     background-color: white;
     color: rgb(106, 103, 103);
