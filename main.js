@@ -26,7 +26,7 @@ document.getElementById('gradient-form').addEventListener('submit', function(eve
     ctx.fillStyle = gradient;
 
     // fill the canva with the result
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvas, canvas);
 });
 
 // question mark box
