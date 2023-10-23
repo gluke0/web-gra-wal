@@ -29,3 +29,4 @@ document.getElementById('gradient-form').addEventListener('submit', function(eve
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 });
 
+
