@@ -94,3 +94,10 @@ function refreshPage(){
 submitButton.addEventListener('click',()=>{
   reset.classList.remove('d-none');
 });
+
+// trending sizes
+const trending = document.querySelector('.trending');
+
+submitButton.addEventListener('click',()=>{
+  trending.classList.add('d-none');
+})
