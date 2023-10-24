@@ -7,6 +7,7 @@
 .all{
     background-color: rgb(173, 177, 177);
     font-weight: bold;
+    height: 100vh;
 }
 
 h1{
@@ -48,7 +49,7 @@ select{
     margin-right: 0.3rem;
 }
 
-.button:hover, #download:hover{
+.button:hover, #download:hover, #reset:hover{
     transform: scale(1.1);
 }
 
@@ -72,6 +73,17 @@ select{
 #download{
     color: rgb(106, 103, 103);
     background-color: white;
+    font-weight: bold;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.8rem;
+    border: none;
+    margin-left: 0.3rem;
+}
+
+/* reset button */
+#reset{
+    color:white;
+    background-color: rgb(238, 81, 81);
     font-weight: bold;
     padding: 0.4rem 0.6rem;
     border-radius: 0.8rem;

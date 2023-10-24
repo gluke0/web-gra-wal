@@ -82,3 +82,14 @@ download.addEventListener('click',()=>{
 
   document.body.removeChild(link);
 });
+
+// refresh page
+const reset = document.querySelector('#reset');
+
+function refreshPage(){
+  location.reload();
+}
+
+submitButton.addEventListener('click',()=>{
+  reset.classList.remove('d-none');
+});
