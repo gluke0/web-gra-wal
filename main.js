@@ -1,4 +1,5 @@
-const canvasSizeSelect = document.getElementById('canvas-size');
+const canvasSizeH = document.getElementById('canvas-height');
+const canvasSizeW = document.getElementById('canvas-width');
 
 document.getElementById('gradient-form').addEventListener('submit', function(event){
     event.preventDefault();
@@ -6,14 +7,15 @@ document.getElementById('gradient-form').addEventListener('submit', function(eve
     const color1 = document.getElementById('color1').value;
     const color2 = document.getElementById('color2').value;
     const direction = document.getElementById('direction').value;
-    const canvasSize = canvasSizeSelect.value;
+    const canvasHeight = canvasSizeH.value;
+    const canvasWidth = canvasSizeW.value;
 
     const canvas = document.getElementById('wallpaper');
     const ctx = canvas.getContext('2d');
 
     // gradient
-    canvas.width = canvasSize;
-    canvas.height = canvasSize;
+    canvas.width = canvasHeight;
+    canvas.height = canvasWidth;
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
 
     switch (direction) {
