@@ -59,7 +59,7 @@ select{
     color: rgb(106, 103, 103);
   }
   
-#helpbox{
+#helpbox, #helpbox-size{
     width: 10rem;
     padding: 0.5rem;
     border-radius: 0.8rem;

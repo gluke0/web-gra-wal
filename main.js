@@ -41,6 +41,18 @@ question.addEventListener('mouseout',()=>{
 helpbox.classList.add('d-none');
 });
 
+// question mark box
+const questionSize = document.getElementById('question-size');
+const helpboxSize = document.getElementById('helpbox-size');
+
+questionSize.addEventListener('mouseover',()=>{
+helpboxSize.classList.remove('d-none');
+});
+
+questionSize.addEventListener('mouseout',()=>{
+helpboxSize.classList.add('d-none');
+});
+
 // download button
 const download = document.querySelector('#download');
 const canvas = document.querySelector('#wallpaper');
