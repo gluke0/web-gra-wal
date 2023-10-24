@@ -12,6 +12,7 @@ document.getElementById('gradient-form').addEventListener('submit', function(eve
 
     const canvas = document.getElementById('wallpaper');
     const ctx = canvas.getContext('2d');
+    canvas.classList.remove('d-none');
 
     // gradient
     canvas.width = canvasHeight;
