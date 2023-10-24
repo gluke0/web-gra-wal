@@ -1,14 +1,19 @@
-document.getElementById('gradient-form').addEventListener('submit', function(event) {
+const canvasSizeSelect = document.getElementById('canvas-size');
+
+document.getElementById('gradient-form').addEventListener('submit', function(event){
     event.preventDefault();
 
     const color1 = document.getElementById('color1').value;
     const color2 = document.getElementById('color2').value;
     const direction = document.getElementById('direction').value;
+    const canvasSize = canvasSizeSelect.value;
 
     const canvas = document.getElementById('wallpaper');
     const ctx = canvas.getContext('2d');
 
     // gradient
+    canvas.width = canvasSize;
+    canvas.height = canvasSize;
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
 
     switch (direction) {
@@ -75,4 +80,3 @@ download.addEventListener('click',()=>{
 
   document.body.removeChild(link);
 });
-
