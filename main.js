@@ -1,40 +1,61 @@
-const canvasSizeH = document.getElementById('canvas-height');
-const canvasSizeW = document.getElementById('canvas-width');
+const canvasSizeH = document.querySelector('#canvas-height');
+const canvasSizeW = document.querySelector('#canvas-width');
+
+const numbers = /^\d+$/;
+
+// check sizes fields
+function validateCanvasSize(){
+  if (!numbers.test(canvasSizeH.value)){
+    console.error('height must be a valid number.');
+    return false;
+  }
+
+  if (!numbers.test(canvasSizeW.value)){
+    console.error('width must be a valid number.');
+    return false;
+  }
+
+  return true;
+}
 
 document.getElementById('gradient-form').addEventListener('submit', function(event){
-    event.preventDefault();
+  event.preventDefault();
 
-    const color1 = document.getElementById('color1').value;
-    const color2 = document.getElementById('color2').value;
-    const direction = document.getElementById('direction').value;
-    const canvasHeight = canvasSizeH.value;
-    const canvasWidth = canvasSizeW.value;
+  if (!validateCanvasSize()) {
+    return;
+  }
 
-    const canvas = document.getElementById('wallpaper');
-    const ctx = canvas.getContext('2d');
-    canvas.classList.remove('d-none');
+  const color1 = document.getElementById('color1').value;
+  const color2 = document.getElementById('color2').value;
+  const direction = document.getElementById('direction').value;
+  const canvasHeight = canvasSizeH.value;
+  const canvasWidth = canvasSizeW.value;
 
-    // gradient
-    canvas.width = canvasHeight;
-    canvas.height = canvasWidth;
-    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+  const canvas = document.getElementById('wallpaper');
+  const ctx = canvas.getContext('2d');
+  canvas.classList.remove('d-none');
 
-    switch (direction) {
-        case "top":
-            gradient.addColorStop(0, color1);
-            gradient.addColorStop(1, color2);
-            break;
-        case "bottom":
-            gradient.addColorStop(0, color2);
-            gradient.addColorStop(1, color1);
-            break;
-    }
+  // gradient
+  canvas.width = canvasHeight;
+  canvas.height = canvasWidth;
+  const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
 
-    // style
-    ctx.fillStyle = gradient;
+  switch (direction) {
+    case "top":
+      gradient.addColorStop(0, color1);
+      gradient.addColorStop(1, color2);
+      break;
+    case "bottom":
+      gradient.addColorStop(0, color2);
+      gradient.addColorStop(1, color1);
+      break;
+  }
 
-    // fill the canva with the result
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // style
+  ctx.fillStyle = gradient;
+
+  // fill the canva with the result
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 });
 
 // question mark box
@@ -42,11 +63,11 @@ const question = document.getElementById('question');
 const helpbox = document.getElementById('helpbox');
 
 question.addEventListener('mouseover',()=>{
-helpbox.classList.remove('d-none');
+  helpbox.classList.remove('d-none');
 });
 
 question.addEventListener('mouseout',()=>{
-helpbox.classList.add('d-none');
+  helpbox.classList.add('d-none');
 });
 
 // question mark box
@@ -54,11 +75,11 @@ const questionSize = document.getElementById('question-size');
 const helpboxSize = document.getElementById('helpbox-size');
 
 questionSize.addEventListener('mouseover',()=>{
-helpboxSize.classList.remove('d-none');
+  helpboxSize.classList.remove('d-none');
 });
 
 questionSize.addEventListener('mouseout',()=>{
-helpboxSize.classList.add('d-none');
+  helpboxSize.classList.add('d-none');
 });
 
 // download button
