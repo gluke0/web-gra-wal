@@ -1,16 +1,14 @@
 const canvasSizeH = document.querySelector('#canvas-height');
 const canvasSizeW = document.querySelector('#canvas-width');
 
-const numbers = /^\d+$/;
-
 // check sizes fields
 function validateCanvasSize(){
-  if (!numbers.test(canvasSizeH.value)){
+  if (canvasSizeH.value = 'null' ){
     canvasSizeH.classList.add('errorsize');
     return false;
   }
 
-  if (!numbers.test(canvasSizeW.value)){
+  if (canvasSizeW.value = 'null' ){
     canvasSizeW.classList.add('errorsize');
     return false;
   }
@@ -21,7 +19,7 @@ function validateCanvasSize(){
 document.getElementById('gradient-form').addEventListener('submit', function(event){
   event.preventDefault();
 
-  if (!validateCanvasSize()) {
+  if (!validateCanvasSize()){
     return;
   }
 
