@@ -99,4 +99,9 @@ select{
     border-radius: 0.8rem;
     color: rgb(106, 103, 103);
 }
-  
+
+/* class for sizes errors */
+.errorsize{
+    border: 1px red solid;
+    color: red;
+}
