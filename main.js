@@ -6,12 +6,12 @@ const numbers = /^\d+$/;
 // check sizes fields
 function validateCanvasSize(){
   if (!numbers.test(canvasSizeH.value)){
-    console.error('height must be a valid number.');
+    canvasSizeH.classList.add('errorsize');
     return false;
   }
 
   if (!numbers.test(canvasSizeW.value)){
-    console.error('width must be a valid number.');
+    canvasSizeW.classList.add('errorsize');
     return false;
   }
 
