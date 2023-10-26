@@ -2,13 +2,13 @@ const canvasSizeH = document.querySelector('#canvas-height');
 const canvasSizeW = document.querySelector('#canvas-width');
 
 // check sizes fields
-function validateCanvasSize(){
-  if (canvasSizeH.value = 'null' ){
+function validateCanvasSize() {
+  if (canvasSizeH.value === 'null'){
     canvasSizeH.classList.add('errorsize');
     return false;
   }
 
-  if (canvasSizeW.value = 'null' ){
+  if (canvasSizeW.value === 'null'){
     canvasSizeW.classList.add('errorsize');
     return false;
   }
