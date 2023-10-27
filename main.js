@@ -34,9 +34,9 @@ document.getElementById('gradient-form').addEventListener('submit', function(eve
   canvas.classList.remove('d-none');
 
   // gradient
-  canvas.width = canvasHeight;
-  canvas.height = canvasWidth;
-  const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+  canvas.height = canvasHeight;
+  canvas.width = canvasWidth;
+  const gradient = ctx.createLinearGradient(0, 0, canvas.height, canvas.width);
 
   switch (direction) {
     case "top":

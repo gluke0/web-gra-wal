@@ -41,27 +41,9 @@
             </div>
 
             <br>
-
-            <div class="dimension">
-                <div class="hh">
+        
                     <label class="mb-4" for="direction"> height: </label>
                     <select id="canvas-height" name="canvas-height" class="ms-2">
-                        <option value="null">choose</option>
-                        <option value="500">500</option>
-                        <option value="1000">1000</option>
-                        <option value="1080">1080</option>
-                        <option value="1179">1179</option>
-                        <option value="1290">1290</option>
-                        <option value="1440">1440</option>
-                    </select>
-                    <i class="fa-solid fa-question-circle" id="question-h"></i>
-                    <div class="mx-auto mb-4 d-none" id="helpbox-size-h">
-                    Choose the height you prefer.
-                    </div>
-                </div>
-                <div class="ww">
-                    <label class="mb-4 ms-2" for="direction"> width: </label>
-                    <select id="canvas-width" name="canvas-width" class="ms-2">
                         <option value="null">choose</option>
                         <option value="500">500</option>
                         <option value="1000">1000</option>
@@ -70,12 +52,27 @@
                         <option value="2796">2796</option>
                         <option value="3088">3088</option>
                     </select>
+                    <i class="fa-solid fa-question-circle" id="question-h"></i>
+                    <div class="mx-auto mb-4 d-none" id="helpbox-size-h">
+                    Choose the height you prefer.
+                    </div>
+
+                    <br>
+
+                    <label class="mb-4 ms-2" for="direction"> width: </label>
+                    <select id="canvas-width" name="canvas-width" class="ms-2">
+                        <option value="null">choose</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                        <option value="1080">1080</option>
+                        <option value="1179">1179</option>
+                        <option value="1290">1290</option>
+                        <option value="1440">1440</option>
+                    </select>
                     <i class="fa-solid fa-question-circle" id="question-w"></i>
                     <div class="m-auto d-none" id="helpbox-size-w">
                     Choose the width you prefer.
                     </div>
-                </div>
-            </div>
             
             <br>
 
@@ -87,7 +84,10 @@
 
          <br>
 
-         <canvas id="wallpaper" class="d-none mb-5 pb-5"></canvas>
+        <div class="m-auto">
+            <canvas id="wallpaper" class="d-none mb-5"></canvas>
+        </div>
+
          <div class="d-flex justify-content-center mt-4">
             <div class="trending p-3">
                 <h3>trending sizes:</h3>
