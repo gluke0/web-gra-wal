@@ -69,15 +69,27 @@ question.addEventListener('mouseout',()=>{
 });
 
 // question mark box
-const questionSize = document.getElementById('question-size');
-const helpboxSize = document.getElementById('helpbox-size');
+const questionSizeH = document.getElementById('question-h');
+const questionSizeW = document.getElementById('question-w');
+const helpboxSizeH = document.getElementById('helpbox-size-h');
+const helpboxSizeW = document.getElementById('helpbox-size-w');
 
-questionSize.addEventListener('mouseover',()=>{
-  helpboxSize.classList.remove('d-none');
+
+questionSizeH.addEventListener('mouseover',()=>{
+  helpboxSizeH.classList.remove('d-none');
 });
 
-questionSize.addEventListener('mouseout',()=>{
-  helpboxSize.classList.add('d-none');
+questionSizeH.addEventListener('mouseout',()=>{
+  helpboxSizeH.classList.add('d-none');
+});
+
+
+questionSizeW.addEventListener('mouseover',()=>{
+  helpboxSizeW.classList.remove('d-none');
+});
+
+questionSizeW.addEventListener('mouseout',()=>{
+  helpboxSizeW.classList.add('d-none');
 });
 
 // download button

@@ -60,7 +60,7 @@ select{
     color: rgb(106, 103, 103);
   }
   
-#helpbox, #helpbox-size{
+#helpbox, #helpbox-size-w, #helpbox-size-h{
     width: 10rem;
     padding: 0.5rem;
     border-radius: 0.8rem;
@@ -115,6 +115,11 @@ footer{
 
 /* media query */
 
-@media (max-width: 768px){
-
+@media (max-width: 450px){
+    .dimension{
+        display: block!important;
+    }
+    .hh, .ww{
+        width: 100%;
+    }
 }
